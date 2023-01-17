@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/Lancelot-SO/To-do#readme",
   "devDependencies": {
+    "add-asset-html-webpack-plugin": "^5.0.2",
     "babel-eslint": "^10.1.0",
     "css-loader": "^6.7.3",
     "eslint": "^7.32.0",
