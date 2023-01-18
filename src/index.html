@@ -4,62 +4,52 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,400,0,0"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Crete+Round&family=Inter&family=Poppins&family=Roboto&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
     <script
-      src="https://kit.fontawesome.com/a2da67af29.js"
-      crossorigin="anonymous"
+      src="https://kit.fontawesome.com/a2da67af29.js"crossorigin="anonymous"
     ></script>
     <title>To Do list</title>
   </head>
   <body>
-    <section class="main">
-      <div class="todo-text flex">
-        <h1>Today's To Do</h1>
-        <i class="fa-solid fa-rotate"></i>
-      </div>
-      <hr />
+    <div class="main-content" id="main">
       <div>
-        <form action="" method="post" id="todo-form">
-          <div class="todo-textarea flex">
-            <input
-              type="text"
-              class="no-outline"
-              placeholder="Add to your list..."
-            />
-            <i class="fa-solid fa-turn-down-left fa-5xl"></i>
-          </div>
-          <hr />
-          <div class="todo-content"></div>
-          <div class="clear-data">
-            <h3>Clear all Completed</h3>
-          </div>
-        </form>
+
+        <!-- Heading and icon -->
+
+        <div class="todo-txt flex">
+          <h2>Today's To Do list</h2>
+          <i class="sync-btn fa-solid fa-rotate"></i>
+        </div>
+        <hr />
+        <div>
+
+          <!-- Input fields start here -->
+
+          <form action="" method="post" id="todo-form">
+            <div class="todo-custom flex">
+              <input
+                type="text"
+                class="no-outline type-task"
+                placeholder="Add to your list..."
+              />
+             <i class="enter-btn fa-solid fa-right-from-bracket"></i>
+            </div>
+            <hr />
+
+            <!-- Button to clear data start here -->
+
+            <div class="todo-inner-content"></div>
+            <div class="clear-data">
+              <h3 class="heading-btn">Clear all Completed</h3>
+
+               <!-- Button to clear data ends here -->
+
+            </div>
+          </form>
+
+           <!-- Input fields ends here -->
+
+        </div>
       </div>
-    </section>
+    </div>
   </body>
 </html>

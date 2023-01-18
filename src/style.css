@@ -6,24 +6,35 @@ body {
   font-size: 20px;
   box-sizing: border-box;
   background: #f3f2f2;
-  font-family: "Lato", sans-serif;
 }
 
-.main {
+/* CSS for main Div */
+
+.main-content {
   background-color: #fff;
   border-radius: 5px;
   margin: 10% 10%;
   box-shadow: 3px 3px 3px 3px gray;
 }
 
+/* CSS for line */
+
 hr {
   border: 0.1px solid #f3f2f2;
   margin: 0;
 }
 
-h1 {
+/* CSS for heading */
+
+h2 {
   font-size: 22px;
   font-weight: normal;
+}
+
+/* CSS for input fields */
+
+input[type=checkbox]:checked + label {
+  text-decoration: line-through;
 }
 
 input {
@@ -34,13 +45,6 @@ input {
 
 input:focus {
   outline: none !important;
-}
-
-.input-data {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 1.5rem;
 }
 
 .listed-task {
@@ -56,20 +60,21 @@ input:focus {
   align-items: center;
 }
 
-.todo-text,
-.todo-textarea,
-.todo-tick {
+.todo-txt,
+.todo-custom,
+.todo-check {
   padding: 1rem 1.5rem;
 }
+
+/* CSS for checkBox */
 
 .checkbox {
   display: flex;
   align-items: center;
 }
 
-#check {
+#to-do-check {
   margin-right: 1rem;
-  width: 50px;
 }
 
 i {
@@ -84,10 +89,11 @@ i {
   text-align: center;
 }
 
-.clear-data h3 {
+.heading-btn {
   cursor: pointer;
   font-weight: normal;
   color: gray;
+  margin: 0;
 }
 
 .clear-data:hover {
@@ -98,5 +104,14 @@ i {
 ::placeholder {
   font-style: italic;
   font-size: 20px;
-  color: #b7b3b3;
 }
+
+.check-icons {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
