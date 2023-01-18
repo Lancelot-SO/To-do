@@ -1,5 +1,4 @@
-/* eslint-disable quotes */
-const InnerTodo = document.querySelector(".todo-inner-content");
+const InnerTodo = document.querySelector('.todo-inner-content');
 let isEdit = false;
 let editId = null;
 
@@ -7,19 +6,19 @@ export default class display {
   // Display list items
   static getTodoList = () => {
     let Todo;
-    if (localStorage.getItem("todo") == null) {
+    if (localStorage.getItem('todo') == null) {
       Todo = [];
     } else {
-      Todo = JSON.parse(localStorage.getItem("todo"));
+      Todo = JSON.parse(localStorage.getItem('todo'));
     }
     return Todo;
   };
 
   // function to delete todo
   static addDeleteEvent = () => {
-    const trash = document.querySelectorAll(".trash");
+    const trash = document.querySelectorAll('.trash');
     trash.forEach((task, i) => {
-      task.addEventListener("click", (ev) => {
+      task.addEventListener('click', (ev) => {
         ev.preventDefault();
         this.deleteTodo(i);
       });
@@ -35,13 +34,13 @@ export default class display {
         item.index -= 1;
       }
     });
-    localStorage.setItem("todo", JSON.stringify(toDos));
+    localStorage.setItem('todo', JSON.stringify(toDos));
     this.populateTodo(toDos);
   };
 
   // Function to display html content
   static populateTodo = (item) => {
-    let display = " ";
+    let display = '';
     item.forEach((e, i) => {
       display += `
       <div class="todo-check flex">
@@ -69,8 +68,8 @@ export default class display {
 
   //  Adding todo list
   static addTodoList = () => {
-    const text = document.querySelector(".type-task").value;
-    if (text !== "") {
+    const text = document.querySelector('.type-task').value;
+    if (text !== '') {
       const toDos = display.getTodoList();
       const newInput = { text, completed: false, index: toDos.length };
       const editInput = { text, completed: false, index: editId };
@@ -78,17 +77,17 @@ export default class display {
       if (isEdit) {
         const singleTodo = toDos.find((item, index) => index === editId);
         Object.assign(singleTodo, editInput);
-        localStorage.setItem("todo", JSON.stringify(toDos));
+        localStorage.setItem('todo', JSON.stringify(toDos));
         this.populateTodo(toDos);
         isEdit = false;
         editId = null;
-        document.querySelector(".type-task").value = "";
+        document.querySelector('.type-task').value = '';
         return;
       }
       toDos.push(newInput);
-      localStorage.setItem("todo", JSON.stringify(toDos));
+      localStorage.setItem('todo', JSON.stringify(toDos));
       this.populateTodo(toDos);
-      document.querySelector(".type-task").value = "";
+      document.querySelector('.type-task').value = '';
     }
   };
 
@@ -96,15 +95,15 @@ export default class display {
   static editTodoList = (id) => {
     const toDos = display.getTodoList();
     const findTodo = toDos.find((item, index) => index === id);
-    document.querySelector(".type-task").value = findTodo.text;
+    document.querySelector('.type-task').value = findTodo.text;
     isEdit = true;
     editId = id;
   };
 
   static editTodoListEvent = () => {
-    const editButton = document.querySelectorAll(".edit-btn");
+    const editButton = document.querySelectorAll('.edit-btn');
     editButton.forEach((task, i) => {
-      task.addEventListener("click", (ev) => {
+      task.addEventListener('click', (ev) => {
         ev.preventDefault();
         this.editTodoList(i);
       });
