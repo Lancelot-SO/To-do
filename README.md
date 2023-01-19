@@ -270,7 +270,7 @@ If you like this project...
 
 > Give credit to everyone who inspired your codebase.
 
-I would like to thank...
+I would like to thank my family for their undying support and a few friends who helped me.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -280,13 +280,13 @@ I would like to thank...
 
 > Add at least 2 questions new developers would ask when they decide to use your project.
 
-- **[Question_1]**
+- **[Can a usser store the data inputed]**
 
-  - [Answer_1]
+  - [Yes, data can be stored in localstorage]
 
-- **[Question_2]**
+- **[Can you clear all completed files]**
 
-  - [Answer_2]
+  - [After a task is completed, you can clear all after checking it]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
