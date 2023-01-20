@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <title>To Do List</title>
+</head>
+
+
+<body>
+<!-- To do list starts here -->
+
+    <div id="toDoList">
+        <div class="title">
+            <h1 class="title1">Today's To Do List</h1>
+            <i class="fa fa-arrows-rotate icon"></i>
+        </div>
+        <form id="inputList" action="#" method="post">
+        <div class="inputTask">
+        <input id="addList" type="text" placeholder="Add to your to do list..." maxlength="80" required>
+        <button class="submiticon" type="submit"> <i class="fa fa-arrow-turn-down icon"></i> </button>
+        </div>
+        </form>
+        <div class="toDoListContainer"></div>
+<!-- button clear starts here -->
+        <button id="btnClear" type="submit">Clear Completed Tasks</button>
+    </div>
+
+<!-- To do list ends here -->
+</body>
+</html>
